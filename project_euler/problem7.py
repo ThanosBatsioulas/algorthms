@@ -2,7 +2,7 @@
 import math
 
 def isPrimary(number):
-    for i in range(2, number):
+    for i in range(2, int(math.sqrt(number))):
         if number % i == 0:
             return False
 
