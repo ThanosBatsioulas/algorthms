@@ -2,9 +2,8 @@
 
 def fibonnaci(value):
     FibonnaciList = [1, 2]
-    while FibonnaciList[len(FibonnaciList) - 1] < value:
-        if (FibonnaciList[len(FibonnaciList) - 1] + FibonnaciList[len(FibonnaciList) - 2]) > value:
-            break
+    while FibonnaciList[len(FibonnaciList) - 1] + FibonnaciList[len(FibonnaciList) - 2] < value:
+        
         FibonnaciList.append(FibonnaciList[len(FibonnaciList) - 1] + FibonnaciList[len(FibonnaciList) - 2])
 
     return FibonnaciList
