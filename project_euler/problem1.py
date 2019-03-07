@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 sum = 0
 for num in range(1000):
-    if num % 3 == 0 or nu, % 5 == 0:
-        sum = sum + i
+    if num % 3 == 0 or num % 5 == 0:
+        sum = sum + num
 
 print(sum)
