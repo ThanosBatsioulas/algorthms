@@ -1,14 +1,13 @@
 
 class Node:
-
     def __init__(self, data):
         self.data = data
         self.next = None
 
-    def printNext(self):
+    def print_next(self):
         print(self.next)
 
-    def printData(self):
+    def print_data(self):
         print(self.data)
 
 
@@ -17,16 +16,17 @@ class linkedList:
     def __init__(self):
         self.head = None
 
-    def printList(self):
+    def print_list(self):
         nodes = self.head
-        while( nodes != None):
+
+        while(nodes != None):
             print(nodes.data)
             nodes = nodes.next
 
     def length(self):
-
         length = 0
         nodes = self.head
+
         while(nodes != None):
             nodes = nodes.next
             length = length + 1
@@ -41,8 +41,10 @@ class linkedList:
             self.head = newNode
         else:
             node = self.head
-            while( node.next != None ):
+
+            while(node.next != None):
                 node = node.next
+
             node.next = newNode
 
     def prepend(self, newData):
@@ -56,9 +58,9 @@ class linkedList:
 
     def insert(self, index, newData):
         newNode = Node(newData)
-
         nodes = self.head
         round = 1
+
         while(nodes != None and round < index):
             if(round == index - 1):
                 tempNext = nodes.next
@@ -68,10 +70,10 @@ class linkedList:
             nodes = nodes.next
             round = round + 1
 
-    def getElementAtIndex(self, index):
-
+    def get_element_at_index(self, index):
         nodes = self.head
         round = 1
+
         while(nodes != None and round <= index):
             if(round == index):
                 return nodes.data
@@ -88,6 +90,6 @@ list.append(3)
 list.prepend(4)
 list.insert(2, 5)
 
-list.printList()
+list.print_list()
 print "the length of the linked list is {}" .format (list.length())
-print "the data of the 2th node is {}".format (list.getElementAtIndex(2))
+print "the data of the 2th node is {}".format (list.get_element_at_index(2))
